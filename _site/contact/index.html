@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Blog Machine</title>
+    <!-- favicon -->
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    
+    
+    
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="brand">Blog Machine</a>
+    <nav class="site-nav" role="navigation">
+      <button class="site-nav-toggle" aria-label="Site Navigation">
+        <svg viewBox="0 0 100 100">
+          <g class="svg-menu-toggle">
+            <path class="line line-1" d="M5 13h90v14H5z"></path>
+            <path class="line line-2" d="M5 43h90v14H5z"></path>
+            <path class="line line-3" d="M5 73h90v14H5z"></path>
+          </g>
+        </svg>
+      </button>
+      <ul class="site-nav-items">
+        <li><a href="/copywriting" id="first-nav-item">Copywriting</a></li>
+        <li><a href="/featured-writer">Featured Writer</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+    
+    <main class="site-content" role="main">
+      
+<article class="page">
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        
+        <h1>Contact</h1>
+        
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex eros, efficitur nec iaculis in, gravida sed tortor.</p>
+        
+      </div>
+       <div class="page-header-image">
+        
+          <img src="https://via.placeholder.com/400x300">
+        
+      </div>
+
+    </div>
+  </header>
+  <section class="page-content">
+    <div class="container">
+      
+<section class="content-section form-section">
+  <form class="site-form">
+    <div class="form-control-group">
+      <div class="form-control">
+        <label>First Name</label>
+        <input type="text">
+      </div>
+      <div class="form-control">
+        <label>First Name</label>
+        <input type="text">
+      </div>
+    </div>
+    <div class="form-control">
+      <label>Email</label>
+      <input type="text">
+    </div>
+    <div class="form-control">
+      <label>Message</label>
+      <textarea rows="8"></textarea>
+    </div>
+    <div class="button-container">
+      <button class="button">Submit</button>
+    </div>
+  </form>
+</section>
+    </div>
+  </section>
+</article>
+    </main>
+
+    
+    
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <section class="contact-section">
+      <div class="content-panel">
+        <div class="content-panel-content">
+          <h2>Let us help you make your content</h2>
+          <div class="button-container">
+            <a href="#" class="button cta-button solid-button">Take an Action</a>
+          </div>
+        </div>
+        <div class="content-panel-image">
+          <img src="https://via.placeholder.com/400x500">
+        </div>
+    </section>
+    <section class="site-info">
+      <a href="/" class="brand">The Blog Machine</a>
+      <nav class="footer-nav">
+        <ul class="site-nav-items">
+          <li><a href="/copywriting">Copywriting</a></li>
+          <li><a href="/featured-writer">Featured Writer</a></li>
+          <li><a href="/case-studies">Copywriting</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="site-boilerplate">&copy; 2023</p>
+    </section>
+  </div>
+</footer>
+    
+    
+    
+
+
+
+<script>
+  (function(){
+    const site_nav_toggle = document.querySelector('.site-nav-toggle');
+    const site_nav = document.querySelector('.site-nav-items');
+
+    let nav_resizer = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        site_nav.setAttribute('aria-hidden', window.getComputedStyle(site_nav_toggle).display == 'block');
+      }
+    });
+
+    nav_resizer.observe(site_nav);
+
+    if (site_nav_toggle){
+
+      if (window.getComputedStyle(site_nav_toggle).display == 'block'){
+        site_nav.setAttribute('aria-hidden', true);
+      }
+
+      site_nav_toggle.addEventListener('click', function(){
+        console.log('click')
+        this.classList.toggle('toggle-close');
+        site_nav.classList.toggle('site-nav-open');
+        site_nav.setAttribute('aria-hidden', !this.classList.contains('toggle-close'));
+      })
+    }
+  })();
+</script>
+
+
+
+
+  </body>
+</html>

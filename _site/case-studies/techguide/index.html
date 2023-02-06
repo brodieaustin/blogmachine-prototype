@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techguide.org | Blog Machine</title>
+    <!-- favicon -->
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    
+    
+    
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="brand">Blog Machine</a>
+    <nav class="site-nav" role="navigation">
+      <button class="site-nav-toggle" aria-label="Site Navigation">
+        <svg viewBox="0 0 100 100">
+          <g class="svg-menu-toggle">
+            <path class="line line-1" d="M5 13h90v14H5z"></path>
+            <path class="line line-2" d="M5 43h90v14H5z"></path>
+            <path class="line line-3" d="M5 73h90v14H5z"></path>
+          </g>
+        </svg>
+      </button>
+      <ul class="site-nav-items">
+        <li><a href="/copywriting" id="first-nav-item">Copywriting</a></li>
+        <li><a href="/featured-writer">Featured Writer</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+    
+    <main class="site-content" role="main">
+      
+<article class="page">
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <span class="section-title"><a href="#">Case Studies</a></span>
+        <h1>Techguide.org</h1>
+        
+          <p>Welcome to the amazing success story of TechGuide.org, a technology-focused website that has seen remarkable growth in its organic traffic over the past year. Going from zero to 3,500 monthly visitors within 12 months is no small feat – but this article will give you the inside scoop on how TechGuide achieved such great results. (This traffic data is public information.)</p>
+        
+      </div>
+       <div class="page-header-image">
+        
+          <img src="https://via.placeholder.com/400x300">
+        
+      </div>
+
+    </div>
+  </header>
+  <section class="page-content">
+    <div class="container">
+      
+<section class="content-section user-content-section">
+  <figure class="user-media-block">
+    <img src="/assets/img/techguide.jpg">
+    <figcaption>An example of an image caption</figcaption>
+  </figure>
+  <div class="user-content-block">
+    <p>TechGuide has been able to amass almost ten thousand backlinks to date due to its knowledgeable and helpful approach to presenting valuable information. The website does not employ any type of sales tactics in its writings; instead, it provides readers with the facts that they need in order to make an educated decision when it comes to pursuing technology careers and formal training. This transparent method has earned TechGuide a great reputation in the industry, which is why so many websites have chosen to link their content back to this resourceful platform.</p>
+    <p>Not only does TechGuide offer helpful advice, but it also provides external links to relevant resources where readers can learn more about the topics discussed on the website each day.</p>
+  </div>
+  <figure class="user-media-block">
+    <img src="/assets/img/techguide.jpg">
+  </figure>
+  <div class="user-content-block">
+    <p>TechGuide has been able to amass almost ten thousand backlinks to date due to its knowledgeable and helpful approach to presenting valuable information. The website does not employ any type of sales tactics in its writings; instead, it provides readers with the facts that they need in order to make an educated decision when it comes to pursuing technology careers and formal training. This transparent method has earned TechGuide a great reputation in the industry, which is why so many websites have chosen to link their content back to this resourceful platform.</p>
+    <p>Not only does TechGuide offer helpful advice, but it also provides external links to relevant resources where readers can learn more about the topics discussed on the website each day.</p>
+  </div>
+</section>
+    </div>
+  </section>
+</article>
+    </main>
+
+    
+    
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <section class="contact-section">
+      <div class="content-panel">
+        <div class="content-panel-content">
+          <h2>Let us help you make your content</h2>
+          <div class="button-container">
+            <a href="#" class="button cta-button solid-button">Take an Action</a>
+          </div>
+        </div>
+        <div class="content-panel-image">
+          <img src="https://via.placeholder.com/400x500">
+        </div>
+    </section>
+    <section class="site-info">
+      <a href="/" class="brand">The Blog Machine</a>
+      <nav class="footer-nav">
+        <ul class="site-nav-items">
+          <li><a href="/copywriting">Copywriting</a></li>
+          <li><a href="/featured-writer">Featured Writer</a></li>
+          <li><a href="/case-studies">Copywriting</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="site-boilerplate">&copy; 2023</p>
+    </section>
+  </div>
+</footer>
+    
+    
+    
+
+
+
+<script>
+  (function(){
+    const site_nav_toggle = document.querySelector('.site-nav-toggle');
+    const site_nav = document.querySelector('.site-nav-items');
+
+    let nav_resizer = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        site_nav.setAttribute('aria-hidden', window.getComputedStyle(site_nav_toggle).display == 'block');
+      }
+    });
+
+    nav_resizer.observe(site_nav);
+
+    if (site_nav_toggle){
+
+      if (window.getComputedStyle(site_nav_toggle).display == 'block'){
+        site_nav.setAttribute('aria-hidden', true);
+      }
+
+      site_nav_toggle.addEventListener('click', function(){
+        console.log('click')
+        this.classList.toggle('toggle-close');
+        site_nav.classList.toggle('site-nav-open');
+        site_nav.setAttribute('aria-hidden', !this.classList.contains('toggle-close'));
+      })
+    }
+  })();
+</script>
+
+
+
+
+  </body>
+</html>

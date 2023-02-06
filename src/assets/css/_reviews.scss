@@ -1,0 +1,24 @@
+.reviews{
+  @include grid-layout();
+  @include unstyled-list();
+  margin-top: 2rem;
+}
+
+.review{
+  @include grid-columns(6);
+  background: rgba($dark-blue, .8);
+  padding: 2rem 2rem;
+}
+
+.review-content{
+  blockquote{
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  figcaption{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--gray);
+  }
+}

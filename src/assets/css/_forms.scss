@@ -1,0 +1,43 @@
+/* form */
+
+.site-form{
+  width: 100%;
+  margin: 0 0 2rem;
+}
+
+.form-control-group{
+  display: flex;
+  flex-direction: column;
+
+  @media (#{$bp-gt-md}){
+    flex-direction: row;
+
+    .form-control{
+      flex-basis: 50%;
+      margin-right: 2rem;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.form-control{
+  margin: 0 0 2rem;
+
+  label{
+    display: block;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  input, textarea, select{
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #aaa;
+    font-size: .875rem;
+    font-family: inherit;
+  }
+}

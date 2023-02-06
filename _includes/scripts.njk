@@ -1,0 +1,42 @@
+{# scripts #}
+
+{# mobile nav #}
+
+<script>
+  (function(){
+    const site_nav_toggle = document.querySelector('.site-nav-toggle');
+    const site_nav = document.querySelector('.site-nav-items');
+
+    let nav_resizer = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        site_nav.setAttribute('aria-hidden', window.getComputedStyle(site_nav_toggle).display == 'block');
+      }
+    });
+
+    nav_resizer.observe(site_nav);
+
+    if (site_nav_toggle){
+
+      if (window.getComputedStyle(site_nav_toggle).display == 'block'){
+        site_nav.setAttribute('aria-hidden', true);
+      }
+
+      site_nav_toggle.addEventListener('click', function(){
+        console.log('click')
+        this.classList.toggle('toggle-close');
+        site_nav.classList.toggle('site-nav-open');
+        site_nav.setAttribute('aria-hidden', !this.classList.contains('toggle-close'));
+      })
+    }
+  })();
+</script>
+
+{# load carousel if homepage #}
+{% if page.title == 'Home' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <script>
+    (function(){
+      new Glide('.glide').mount()
+    })();
+  </script>
+{% endif %}

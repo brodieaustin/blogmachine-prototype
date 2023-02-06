@@ -1,0 +1,54 @@
+/* buttons */
+
+.button-container{
+  display: flex;
+  margin-top: 2rem;
+
+  .button{
+    margin-right: 1rem;
+  }
+
+  &.buttons-centered{
+    align-items: center;
+    justify-content: center;
+
+    .button{
+      margin: 0 .5rem;
+    }
+  }
+}
+@mixin button(){
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--blue);
+  border: 0;
+  border-radius: 4rem;
+  letter-spacing: 1px;
+  font-family: var(--brand-font-family);
+  font-weight: 500;
+  font-size: .875rem;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .2s ease-in-out;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+.button{
+  @include button();
+}
+
+.cta-button{
+  @include button();
+  padding: 1.5rem 3.5rem;
+  background-color: rgba($dark-blue, .8);
+  border: 3px solid $light-blue;
+  font-weight: 700;
+
+  &.solid-button{
+    background-color: var(--blue);
+  }
+}

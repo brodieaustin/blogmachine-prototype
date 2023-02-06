@@ -1,0 +1,42 @@
+/* settings */
+
+$blue: #035581; 
+$light-blue: #008FDB;
+$dark-blue: #00142C;
+
+// css vars
+:root{
+  --base-font-family: 'IBM Plex Sans', sans-serif;
+  --brand-font-family: 'Work Sans', sans-serif;
+  --white: #fff;
+  --black: #020200;
+  --gray: #888;
+  --light-gray: #aaa;
+  --blue: #{$blue};
+  --light-blue: #{$light-blue};
+  --dark-blue: #{$dark-blue};
+}
+
+// sass vars
+
+$border-radius: 6px;
+
+// layers
+$layer-one: 100;
+$layer-two: 500;
+$layer-three: 1000;
+$layer-four: 2000;
+$layer-five: 4000;
+$layer-six: 6000;
+$layer-seven: 8000;
+$layer-eight: 10000;
+$layer-nine: 12000;
+$layer-ten: 14000;
+
+// breakpoints
+// usage: @media (#{$bp-gt-sm})
+$bp-gt-sm: "min-width: 520px" !default;
+$bp-gt-md: "min-width: 768px" !default;
+$bp-gt-lg: "min-width: 1024px" !default;
+$bp-gt-xl: "min-width: 1280px" !default;
+$bp-gt-xxl: "min-width: 1536px" !default;

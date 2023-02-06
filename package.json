@@ -1,0 +1,20 @@
+{
+  "name": "blogmachine_prototype",
+  "version": "1.0.0",
+  "description": "Blog Machine prototype",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "author": "Brodie Austin",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "sass": "^1.57.1",
+    "scss-resets": "^0.5.2"
+  },
+  "dependencies": {
+    "eleventy-sass": "^2.1.7"
+  }
+}

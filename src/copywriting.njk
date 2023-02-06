@@ -1,0 +1,30 @@
+---
+title: "Copywriting"
+layout: page.njk
+page_description: "Our copywriting spans across many different industries. You may have already seen our bylined writing portfolio. In contrast, unbylined work is when we write marketing content anonymously; content is not attributed directly to us. Here’s a representative sample of one month’s work."
+page_img: "/assets/img/robot-with-digital-tablet-removebg-preview.png"
+---
+
+<section class="examples-section">
+  <ul class="examples">
+    {% for example in copywriting_examples %}
+      <li class="example-item">
+        {% if example.url %}
+        <a href="{{ example.url }}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200"><path d="M785.52 227.04c-48.055.04-96.074 18.289-132.57 54.785l-26.512 26.512a37.505 37.505 0 0 0 0 53.028c7.03 7.032 16.566 10.98 26.512 10.98s19.48-3.95 26.512-10.98l26.516-26.516c44.527-44.527 114.63-44.676 159.16-.14 44.531 44.526 44.531 114.77 0 159.3l-212.11 212.11c-29.84 29.84-76.215 29.84-106.05 0-3.559-3.555-6.66-7.383-9.367-11.353-5.344-7.836-15.758-15.16-25.27-15.16-33.055 0-55.008 34.54-30.47 65.918 3.7 4.743 7.74 9.27 12.09 13.625 58.302 58.301 153.8 58.301 212.11 0l212.11-212.11c72.993-72.992 72.993-192.36 0-265.36-36.495-36.496-84.585-54.676-132.64-54.637zM600 397.11c-38.457 0-76.902 14.574-106.05 43.727l-52.953 53.027-159.16 159.08c-72.992 72.992-72.992 192.36 0 265.36 72.992 72.992 192.22 72.844 265.21-.14l26.516-26.442h-.004a37.49 37.49 0 0 0 11.016-26.55c0-9.962-3.96-19.513-11.016-26.548a37.502 37.502 0 0 0-26.516-10.984 37.504 37.504 0 0 0-26.512 10.984L494.02 865.14c-44.527 44.527-114.63 44.676-159.16.141-44.53-44.527-44.53-114.77 0-159.3l159.16-159.08 52.953-53.027c29.84-29.84 76.215-29.84 106.05 0 3.559 3.555 6.66 7.383 9.367 11.352 5.344 7.836 15.758 15.16 25.27 15.16 33.055 0 55.008-34.465 30.47-65.844-3.716-4.742-7.739-9.34-12.09-13.695-29.153-29.152-67.599-43.727-106.05-43.727z"/></svg>
+        {% endif %}
+          <h3>{{ example.client }}</h3>
+          {% if example.articles|length %}
+            <ul class="example-subitems">
+              {% for article in example.articles %}
+                <li class="example-subitem">{{ article.title }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% if example.url %}
+        </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,65 @@
+/* footer */
+
+.site-footer{
+  background: rgb(2,2,0);
+  background: linear-gradient(180deg, rgba(2,2,0,1) 20%, rgba(1,38,72,1) 100%);
+  color: var(--white);
+
+  .container{
+    padding-top: 8rem;
+  }
+}
+
+.contact-section{
+  
+  h2{
+    margin-top: 6rem;
+    margin-bottom: .5rem;
+    font-size: 3rem;
+  }
+
+  .content-panel-content{
+    @include grid-columns(12);
+    order: 2;
+    text-align: center;
+
+    @media (#{$bp-gt-lg}){
+      @include grid-columns(6);
+      order: 1;
+      text-align: left;
+    }
+
+    .button-container{
+      justify-content: center;
+
+      @media (#{$bp-gt-lg}){
+        justify-content: left;
+      }
+    }
+  }
+
+  .content-panel-image{
+    @include grid-columns(12);
+    order: 1;
+    text-align: center;
+
+    @media (#{$bp-gt-lg}){
+      @include grid-columns(6);
+      order: 2;
+    }
+  }
+}
+
+.site-info{
+  margin-top: 8rem;
+  text-align: center;
+
+  .site-nav-items{
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+}
+
+.site-boilerplate{
+  font-size: .875rem;
+}

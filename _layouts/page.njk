@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+<article class="page">
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        {% if section_title %}<span class="section-title"><a href="#">{{ section_title }}</a></span>{% endif %}
+        <h1>{{ title }}</h1>
+        {% if page_description %}
+          <p>{{ page_description }}</p>
+        {% endif %}
+      </div>
+       <div class="page-header-image">
+        {% if page_img %}
+          <img src="{{ page_img }}">
+        {% else %}
+          <img src="https://via.placeholder.com/400x300">
+        {% endif %}
+      </div>
+
+    </div>
+  </header>
+  <section class="page-content">
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </section>
+</article>

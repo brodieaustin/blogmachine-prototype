@@ -1,0 +1,63 @@
+/* layout */
+
+.container{
+  width: 100%;
+  max-width: 77.5rem;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+@mixin grid-layout{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+
+  @media (#{$bp-gt-lg}) {
+    grid-gap: 2rem;
+  }
+}
+
+.columns{
+  @include grid-layout();
+}
+
+@mixin grid-columns($column-span){
+  grid-column: span $column-span;
+}
+
+.columns-one{
+  @include grid-columns(1);
+}
+.columns-two{
+  @include grid-columns(2);
+}
+.columns-three{
+  @include grid-columns(3);
+}
+.columns-four{
+  @include grid-columns(4);
+}
+.columns-five{
+  @include grid-columns(5);
+}
+.columns-six{
+  @include grid-columns(6);
+}
+.columns-seven{
+  @include grid-columns(7);
+}
+.columns-eight{
+  @include grid-columns(8);
+}
+.columns-nine{
+  @include grid-columns(9);
+}
+.columns-ten{
+  @include grid-columns(10);
+}
+.columns-eleven{
+  @include grid-columns(11);
+}
+.columns-twelve{
+  @include grid-columns(12);
+}
