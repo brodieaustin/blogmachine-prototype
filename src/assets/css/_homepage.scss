@@ -10,7 +10,7 @@
   h2{
     margin-top: .5rem;
     margin-bottom: .5rem;
-    font-size: 3rem;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   p{
@@ -156,10 +156,12 @@
 .topics-image{
   grid-column: 1 / 13;
   max-height: 300px;
+  margin-bottom: -4rem;
 
   @media (#{$bp-gt-lg}){
     grid-row: 2 / 3;
     margin-top: -4rem;
+    margin-bottom: 0;
   }
 }
 
@@ -187,15 +189,21 @@
 }
 
 .work-section-heading{
-  max-width: 80%;
   margin: auto;
   text-align: center;
+
+  @media (#{$bp-gt-md}){
+    max-width: 80%;
+  }
 }
 
 .work-section-examples{
-  margin-top: 4rem;
   margin-bottom: -24px;
   text-align: center;
+
+  @media (#{$bp-gt-md}){
+    margin-top: 4rem;
+  }
 
   figure{
     margin: 0;

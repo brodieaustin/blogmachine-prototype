@@ -7,7 +7,7 @@
 .review{
   @include grid-columns(12);
   background: rgba($dark-blue, .8);
-  padding: 2rem 2rem;
+  padding: 2rem;
 
   @media (#{$bp-gt-md}){
     @include grid-columns(6);
@@ -15,9 +15,15 @@
 }
 
 .review-content{
+  margin: 0;
+
   blockquote{
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+
+    @media (#{$bp-gt-md}){
+      font-size: 1.25rem;
+    }
   }
 
   figcaption{
